@@ -7,7 +7,15 @@
   pointer-events: none;
 }
 
-body { background: #1a1a1a !important; }
+body { 
+  
+  background-image: url("https://i.imgur.com/iqJ0pJo.jpg")!important;
+  height: 440px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #1a1a1a ; 
+  
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
