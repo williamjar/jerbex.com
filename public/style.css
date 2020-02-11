@@ -1,0 +1,16 @@
+/* Global settings */
+
+body { background: #1a1a1a !important; }
+
+
+.btn-primary {
+    background:  #00799e !important;
+    border-color: #00799e !important;
+    outline-color: #00799e !important;
+}
+
+.btn-primary:hover {
+    background:  #1a1a1a !important;
+    color: white !important;
+    border-color: #1a1a1a !important;
+}
