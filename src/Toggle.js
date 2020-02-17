@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {useSpring, animated} from 'react-spring';
-import {Button} from 'react-bootstrap';
 
 export const Toggle = () => {
     

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useSpring, animated} from 'react-spring';
 import { Toggle } from './Toggle';
-import {Button} from 'react-bootstrap';
+
 
 const App = () => {
 
