@@ -3,32 +3,23 @@ import {useSpring, animated} from 'react-spring';
 import {Button} from 'react-bootstrap';
 
 export const Toggle = () => {
-    const [isToggled, setToggle] = useState(true);
+    
 
     const fade = useSpring({
-        opacity: isToggled ? 1:0
+        from: {width:'1rem'}, width:'40rem'
     })
 
+    
 
     return(
         <div>
-            <button 
-            type="button"
-            class="btn btn-primary shadow justify-content-center" 
-            onClick ={() => setToggle(!isToggled)}
-            align="middle"
-            >
-            aaaaa
-            </button>
+           
             <center>
-            
-            
             <animated.div
             style={fade}>
             
             <div 
-            class="card p-2"
-            style={{ width: '25rem' }}
+            class="mt-2 card shadow-lg bg-dark"
             >
             
             <img
