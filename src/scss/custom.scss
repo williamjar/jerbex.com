@@ -1,0 +1,31 @@
+
+/* Global settings */
+
+$body-bg: rgb(36, 36, 36);
+$font-stack:    Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+$theme-colors: (
+    "primary":  #15576b,
+    "danger": #6b2f15,
+    "secondary": #474e52,
+    "superdark": #353535,
+    "info": rgb(56, 134, 141)
+);
+
+
+$modal-content-bg: #474e52;
+$modal-content-fallback-border-color: #474e52;
+$modal-content-border-color: #474e52;
+$modal-backdrop-bg:           #242424;
+
+* {
+    border-radius: 0 !important;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
+

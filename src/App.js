@@ -1,14 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {useSpring, animated} from 'react-spring';
+import { Toggle } from './Toggle';
+import {Button} from 'react-bootstrap';
 
-function App() {
+const App = () => {
+
+  const fade = useSpring({from: {opacity: 0}, opacity: 1})
+
+
   return (
-    <div className="App" >
-      <h1 onClick={() => window.open("https://www.youtube.com/watch?v=9bZkp7q19f0")}><font size="100" color="white">ゲーミング !</font></h1>
+    
+    <animated.div className="App" style={fade}>
+        <header>
+       <center>
+          <h1 class="mt-4"><font color="white" size="140">ゲーミング</font></h1>
+       </center>
+        </header>
+       <main>
+         <Toggle/>
+        </main>
       
-    </div>
-  );
+    </animated.div>
+    
+  )
 }
 
 export default App;
