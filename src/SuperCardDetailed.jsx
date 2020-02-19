@@ -6,7 +6,7 @@ import { FaNodeJs, FaReact, FaJava, FaPython } from 'react-icons/fa';
 
 
 
-export const SuperCard = ({title, content, initialWidth, endingWidth}) => {
+export const SuperCardDetailed = ({title, content, initialWidth, endingWidth}) => {
 
 
   const [hover, setHover] = useState(false)
@@ -35,17 +35,38 @@ export const SuperCard = ({title, content, initialWidth, endingWidth}) => {
         <Card onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}  className="m-4 shadow border-0">
     
         <Card.Title className="m-4 text-center">{title}</Card.Title>
-            
-    
+        
+        
             
             {hover ? (
             <div>
             <animated.div style={jumpIn}>
-            <Card.Body className="text-center">
+            <Card.Body>
+              
+            <Card.Text className="text-center">
+
+            <strong>University</strong>
+            <p>NTNU BSc. Computer Science 2021</p>
+            <p>SCRUM and team projects</p>
+            <p>Computer engineering and theory</p>
+            <p>Real world problem solving</p>
+            <FaNodeJs size={'4em'} />
+            <FaReact size={'4em'}/>
+            <FaJava size={'4em'}/>
+            <FaPython size={'4em'}/>
+
+
+            <p/>
             
-            {content.map(line => 
-              <p>{line.toUpperCase()}</p>
-            )}
+            <strong>Mekanisk AS</strong>
+            <p>CAD, production, customer relations, managing business</p>
+
+            <strong>High school</strong>
+            <p>Vocational ICT/electronics background</p>
+            
+            
+            </Card.Text>
+          
 
            
 
@@ -67,4 +88,4 @@ export const SuperCard = ({title, content, initialWidth, endingWidth}) => {
   )
 }
 
-export default SuperCard;
+export default SuperCardDetailed;
