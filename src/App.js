@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import {useSpring, animated} from 'react-spring';
 import {Card, Row,Container,Button, ProgressBar} from 'react-bootstrap';
 import bg from './shibuya.jpg';
-import {SuperCard} from './SuperCard';
-import { SuperCardDetailed } from './SuperCardDetailed';
+import Projects, {SuperCard} from './Projects';
+import Summary, { SuperCardDetailed } from './Summary';
+import Contact from './Contact';
 
 
 //usecontext
@@ -48,9 +49,10 @@ const App = () => {
       
         <Row className="justify-content-center mt-4">
 
-          <SuperCardDetailed title="SUMMARY" initialWidth='30rem' endingWidth='35rem'/>
-          <SuperCard title="PROJECTS" content={projects} initialWidth='30rem' endingWidth='35rem'/>
-          <SuperCard title="CONTACT" content={contact} initialWidth='30rem' endingWidth='35rem'/>
+        
+          <Summary title="SUMMARY" initialWidth='30rem' endingWidth='35rem'/>
+          <Projects title="PROJECTS" content={projects} initialWidth='30rem' endingWidth='35rem'/>
+          <Contact title="CONTACT" content={contact} initialWidth='30rem' endingWidth='35rem'/>
           
           </Row>
     </animated.div>
