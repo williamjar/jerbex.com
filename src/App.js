@@ -24,19 +24,15 @@ const App = () => {
   const enlarge = useSpring({
     width: hover ? '40rem' : '15rem' 
   })
-  
-  
-
 
   return (
     
     <Container fluid>
-       
     <animated.div  style={jumpIn}>
       <Button disabled variant={"secondary"} className="m-4 ">DARK MODE</Button>
       <Button disabled variant={"outline-secondary"} className="m-4">NORSK</Button>
       <h1 className="text-muted text-center">WILLIAM JARBEAUX</h1>
-      <h4 className="text-muted text-center">GAMER</h4>
+      <h4 className="text-muted text-center">STUDENT</h4>
       
         <Row className="justify-content-center mt-4">
 
@@ -45,9 +41,6 @@ const App = () => {
           <SuperCard title="CONTACT" content="WILLIAM@MEKANISK.CO" initialWidth='20rem' endingWidth='35rem'/>
           
           </Row>
-        
-          
-        
     </animated.div>
     
 
