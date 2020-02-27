@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Link, Router, NavLink } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring';
-import { Card, Col, Row, Container, Button, ProgressBar, CardDeck } from 'react-bootstrap';
+import { Card, Col, Row, Container, Button, ProgressBar, CardDeck, Table } from 'react-bootstrap';
 import { FaNodeJs, FaReact, FaJava, FaPython } from 'react-icons/fa';
-
 import ContentCard from './ContentCard';
 
+const harmoni = require('./resources/harmoni.png')
+const mekaniskxyz = require('./resources/mekaniskxyz.png')
 
 //usecontext
 const App = () => {
@@ -24,14 +26,12 @@ const App = () => {
     <Container fluid>
       <animated.div style={jumpIn}>
         <p />
-        <h1 className="text-center mt-4">WILLIAM JARBEAUX</h1>
-        <h4 className="text-center">COMPUTER SCIENCE STUDENT</h4>
+        <h1 className="text-center text-white mt-4">WILLIAM JARBEAUX</h1>
+        <h4 className="text-center text-white">COMPUTER SCIENCE STUDENT</h4>
 
-    <Row className="justify-content-center">
+        <Row className="justify-content-center mt-4">
           <ContentCard title="summary">
-
             <strong>University</strong>
-
             <p>NTNU BSc. Computer Science 2021</p>
             <p>SCRUM and team projects</p>
             <p>Computer engineering and theory</p>
@@ -47,33 +47,30 @@ const App = () => {
 
             <strong>High school</strong>
             <p>Vocational ICT/electronics background</p>
-          </ContentCard>
-
-
-          <ContentCard title="projects">
-
-            <p><strong>Harmoni Web App</strong></p>
-            <p><strong>Grade calculator</strong></p>
-            <p><strong>Mekanisk.XYZ</strong></p>
-            <p><strong>Python web compiler</strong></p>
 
           </ContentCard>
-
-
-
-          <ContentCard title="Contact Info">
-
-            <p><strong>william@mekanisk.co</strong></p>
-         
-          </ContentCard>
-
-
         </Row>
-       
-          
 
+        <h4 className="text-center text-white mt-4">PROJECTS</h4>
 
-       
+        <Row className="justify-content-center mt-4">
+
+          <ContentCard image={mekaniskxyz} title="Mekanisk.xyz">
+            <p>A website for comparing and gathering information about the products Mekanisk offer</p>
+            <Button  onClick={()=> window.open('https://mekanisk.xyz/')} className="float-right">Go to website</Button>
+            <Button  onClick={()=> window.open('https://github.com/williamjar/mekanisk.xyz')}>Go to Git-repository</Button>
+          </ContentCard>
+
+          <ContentCard image={harmoni} title="Harmoni">
+            <p>University SCRUM-project. A website for organizing events in an effective way.</p>
+
+            <Button onClick={()=> window.open('https://github.com/williamjar/Harmoni')}>Go to Git-repository</Button>
+          </ContentCard>
+
+          <br />
+          <br />
+          <br />
+        </Row>
       </animated.div>
     </Container>
   )
